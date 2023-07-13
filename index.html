@@ -12,23 +12,26 @@
 
 
 
-    <!-- ----------------------   HOME SCREEN  ----------------------- -->
+    <!-- ----------------------   HOME   ----------------------- -->
     
-        <div class="container">
+    <div class="container">
+
+        <!-- HOME MOBILE  ---------------------------------------------------------->
+
+            <!-- Mobile Menu -->
+        <div class="homeMobile">
             <header id="header">
-
-                <!-- Mobile Menu -->
-                <div id="horizontal-logo">
-                    <img id="logo-luciana-horizontal" src="./assets/logo-horizontal.png" alt="" srcset="">
+                <div id="header-mobile">
+                    <div id="horizontal-logo">
+                        <img id="logo-luciana-horizontal" src="./assets/logo-horizontal.png" alt="" srcset="">
+                    </div>
+                    <div id="menu-icon-closed">
+                        <button id="btn-open-menu"><img id="menu-closed" src="./assets/menu-mobile-closed.svg" alt=""></button> 
+                    </div>
                 </div>
-                <div id="menu-icon-closed">
-                    <button id="btn-open-menu"><img id="menu-closed" src="./assets/menu-mobile-closed.svg" alt=""></button> 
-                </div>
-
-                <!-- Desktop Menu -->
             </header>
 
-        <main id="main-background">
+        <section id="main-background">
             <div id="presentation">
                 <h1>Luciana Otoch</h1>
                 <h3>20 anos aprimorando a experiência humana, através de projetos inovadores</h3>
@@ -36,7 +39,7 @@
             <div id="div-foto">
                 <img src="./assets/foto_perfil-01.png" alt="Foto da arquiteta Luciana Otoch com uma blusa roxa, cabelos pretos, pele branca, cabelo escuro e comprido.">
             </div>
-            <div id="services">
+            <div id="services" class="services-desktop">
                 <div class="text-work-for">
                     <h5>Trabalhamos para todo o Brasil.</h5>
                 </div>
@@ -55,31 +58,112 @@
                 <div class="div-text-works">
                     <p class="text-works">Retrofit de Fachadas</p>
                 </div>
-                <div id="fale-conosco">
-                    <a  href="https://wa.me/+5585991716260" target="_blank"><img id="img-fale-conosco" src="./assets/button-fale-conosco.svg" alt="Botão fale conosco para entrar em contato com a arquiteta."></a>
-                    
+                <div id="fale-conosco" class="fale-conosco">
+                    <button class="btn" type="submit"><a href="https://wa.me/+5585991716260" target="_blank">Fale Conosco</a></button>
                 </div>
             </div>
-        </main>
+        </section>
     </div>
     
-    <!-- <div class="line"></div> -->
+        <!-- HOME DESKTOP  --------------------------------------------------------->
+
+
+        <div class="homeDesktop">
+            <header id="desktop-menu">
+                <div id="header-desktop">
+                    <div id="logo-desktop-horizontal">
+                        <img src="./assets/logo-horizontal.png" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Projetos</a></li>
+                            <li><a href="">Sobre</a></li>
+                            <button id="btn-contact-desktop" class="btn" type="submit"><a href="https://wa.me/+5585991716260" target="_blank">Contato</a></button>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section id="section-desktop">
+                <div id="main-desktop">
+                    <div id="background-white">
+                        <div id="desktop-profile">
+                            <img src="./assets/foto_perfil-01.png" alt="">
+                        </div>
+                        <div id="text-profile">
+                            <h3>Luciana Otoch</h3>
+                            <p>20 anos aprimorando a experiência humana, através de projetos inovadores.</p>
+                        </div>
+                    </div>
+                    <div id="background-beige">
+                        <div class="services-desktop" id="services">
+                            <div class="text-work-for">
+                                <h5>Trabalhamos para todo o Brasil.</h5>
+                            </div>
+                            <div class="div-text-works">
+                                <p class="text-works">Projetos de Arquitetura Residencial</p>
+                            </div>
+                            <div class="div-text-works">
+                                <p class="text-works">Projetos de Arquitetura Comercial</p>
+                            </div>
+                            <div class="div-text-works">
+                                <p class="text-works">Projetos de Interiores</p>
+                            </div>
+                            <div class="div-text-works">
+                                <p class="text-works">Consultoria de Interiores</p>
+                            </div>
+                            <div class="div-text-works">
+                                <p class="text-works">Retrofit de Fachadas</p>
+                            </div>
+                            <div id="fale-conosco" class="fale-conosco">
+                                <button class="btn" type="submit"><a href="https://wa.me/+5585991716260" target="_blank">Fale Conosco</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="background-gray"></div>
+                </div>
+            </section>
+            <!-- <footer id="footer-home">Copyright Ronaldo Cysne</footer> -->
+        </div>
+
+
     <!-- ----------------------   PROJECTS  ----------------------- -->
 
-    <main id="projects">
+    <section id="projects">
         <div id="container-projects">
 
             <h3>Projetos</h3>
 
             <div id="frame-carroussel">
                 <button>
-                    <div id="left-arrow"></div>
+                    <div id="left-arrow">
+                        <img src="./assets/left-arrow.svg" alt="">
+                    </div>
                 </button>
                 <button>
-                    <div id="right-arrow"></div>
+                    <div id="right-arrow">
+                        <img src="./assets/right-arrow.svg" alt="">
+                    </div>
                 </button>
 
-                    <img src="./assets/projeto03.jpg" alt="">
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="./assets/projeto01.jpg" alt="Fachada de uma casa no Alphavile">
+                    </li>
+                    
+                    <!-- <li class="slide">
+                        <img src="./assets/projeto02.jpg" alt="Fachada de uma casa no Alphavile">
+                    </li>
+            
+                    <li class="slide">
+                        <img src="./assets/projeto03.jpg" alt="Fachada de uma casa no Alphavile">
+                    </li>
+            
+                    <li class="slide">
+                        <img src="./assets/projeto04.jpg" alt="Fachada de uma casa no Alphavile">
+                    </li> -->
+                </ul>
 
             </div>
 
@@ -134,9 +218,137 @@
         </button>
 
         </div>
-    </main>
+    </section>
 
     <!-- ----------------------   ABOUT  ----------------------- -->
 
+    <section id="about">
+        <div id="header-about">
+            <h3>Sobre</h3>
+            <img src="./assets/foto_perfil-02.png" alt="">
+        </div>
+        <div id="skills">
+            <div class="skills-luciana">
+                <h3>Graduada</h3>
+                <p>Arquiteta e Urbanista</p>
+            </div>
+            <div class="skills-luciana">
+                <h3>Especialista</h3>
+                <p>Urbanismo</p>
+            </div>
+            <div class="skills-luciana">
+                <h3>Mestra</h3>
+                <p>Arquitetura</p>
+            </div>
+        </div>
+        <div id="about-luciana">
+            <p>Determinada, responsável e divertida. Transformando vidas e famílias através do design.
+            </p>
+
+            <p>Amo minha profissão e mergulhar nas necessidades das pessoas.
+                Determinação e teimosia são meu combustível. Desistir não faz parte do meu vocabulário!
+            </p>
+
+            <p>
+                Mãe dedicada, brincalhona e amorosa. O amor de mãe transborda em meus projetos.
+            </p>
+
+            <p>
+                GRATIDÃO resume minha jornada!
+            </p>
+
+            <p>
+                Com 20 anos de experiência na arquitetura, já realizei uma ampla variedade de projetos. Sempre em busca do melhor para meus clientes, criando espaços que refletem personalidade e estilo.
+            </p>
+        </div>
+    </section>
+
+    <!-- ----------------------   CONTACT  ----------------------- -->
+
+            <section id="contact">
+                <div id="header-contact">
+                    <h3>Contato</h3>
+                    <p>Espalhamos nossa arquitetura por todo o Brasil!</p>
+                    <p>Quer saber como funciona nosso trabalho? Entre em contato, me contando um pouco mais sobre você, seu projeto ou sua dúvida!</p>
+                    <p>
+                        É só preencher o formulário abaixo ou nos enviar um email para <strong>contato@lucianaotoch.com.br</strong> 
+                    </p>
+                </div>
+                <form>
+                    <div class="input-wrapper">
+                        <label for="client-name">Nome *</label>
+                        <input type="text" name="name" id="client-name">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="client-email">Email *</label>
+                        <input type="email" name="email" id="client-email">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="client-whatsapp">Nome *</label>
+                        <input type="text" name="whatsapp" id="client-whatsapp">
+                    </div>
+
+                    <div id="check">
+                        <h4>Tipo de Projeto</h4>
+                        <div class="check-wrapper">
+                            <input type="checkbox" name="check" id="house">
+                            <label for="house">Casa</label>
+                        </div>
+                        <div class="check-wrapper">                        
+                            <input type="checkbox" name="check" id="apartament">
+                            <label for="apartament">Apartamento</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input type="checkbox" name="check" id="comercial">
+                            <label for="comercial">Comercial</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input type="checkbox" name="check" id="inside">
+                            <label for="inside">Interiores</label>
+                        </div>
+                    </div>
+
+                    <div id="message-area">
+                        <p>Espaço para você me contar um pouco sobre o seu projeto, suas expectativas, localização, etc.</p>
+                        <textarea name="" id="text-area" cols="" rows=""></textarea>
+                    </div>
+
+                    <button class="btn" type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <!-- ----------------------   BUDGET  ----------------------- -->
+
+            <section id="budget-container">
+                <div id="text-logo">
+                    <p>"CADA PRODUTO É ÚNICO E INCOMPARÁVEL, ASSIM COMO SÃO AS PESSOAS".</p>
+                    <img src="./assets/logo-vertical.png" alt="">
+                </div>
+                <p>Quer saber como funciona nosso trabalho? Entre em contato, ficaremos felizes em atendê-lo. </p>
+                <div id="div_button">
+                    <button class="btn" type="submit">Solicitar Orçamento</button>
+                </div>
+            </section>
+
+            <!-- ----------------------   FOOTER  ----------------------- -->
+
+            <footer id="footer-container">
+                <p>Arquiteta Luciana Otoch</p>
+                <div id="footer-footer">
+                    <div id="adress">
+                        <p>Rua Doutor Gilberto Studart, 55</p>
+                        <p>Sala 1016 - Torre Norte</p>
+                        <p>Edifício Duets Office</p>
+                        <p>Fortaleza - Ce</p>
+                    </div>
+                    <div id="social-media">
+                        <a href="https://wa.me/+5585991716260" target="_blank" ><img src="./assets/icon-whatsapp.svg" alt=""></a>
+                        <a href=""><img src="./assets/icon-instagram.svg" alt=""></a>
+                        <a href=""><img src="./assets/icon-facebook.svg" alt=""></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./script.js"></script>
     </body>
 </html>

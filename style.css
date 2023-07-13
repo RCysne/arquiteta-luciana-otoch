@@ -12,31 +12,33 @@
 :root {
     --beige-background: rgba(255, 206, 170, .25);
     --button-red: rgba(188, 53, 28, 1);
-    --gray-background: rgba(217, 217, 217, .4);
+    --gray-background: rgba(217, 217, 217, .3);
     --link-color: rgba(109, 109, 109, 1);
     --gray-light: rgba(245, 245, 245, .6);
     --gray-card: rgba(223, 223, 223, .4);
+
+
+    /* font-size: 62.5%; */
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* MOBILE FIRST */
-
-html {
-    width: 100%;
-    height: 100vh;
-}
-
 body {
-    width: 375px;
+    min-width: 375px;
     height: 100vh;
     margin: 0 auto;
     background-color: #fff;
 }
 
+#container {
+    max-width: 768px;
+}
 
+#header-desktop {
+    display: none;
+}
 
 #btn-open-menu {
     background-color: #fff;
@@ -46,7 +48,8 @@ body {
 #main-background {
     background-color: var(--beige-background);
     border-radius: 20px 20px 0 0;
-    width: 375px;
+    min-width: 375px;
+    padding-bottom: 2rem;
 }
 
 
@@ -60,11 +63,11 @@ body {
 }
 
 #presentation h1 {
-    /* text-align: center; */
+
     font-weight: 500;
     font-size: 1.3rem;
 
-    /* width: 20rem; */
+
     padding-top: 2rem;
 }
 
@@ -99,12 +102,26 @@ body {
 }
 
 #logo-luciana-horizontal {
-    width: 80%;
+    max-width: 500px;
 }
 
 #div-foto {
     text-align: center;
     width: 100%;
+}
+
+.btn {
+    width: 100%;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #fff;
+    background: var(--button-red);
+    height: 50px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 24px;
+    cursor: pointer;
 }
 
 
@@ -126,8 +143,14 @@ body {
 }
 
 #fale-conosco {
-    width: 100%;
+    margin: auto;
+    width: 90%;
     text-align: center;
+}
+
+#fale-conosco a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #img-fale-conosco {
@@ -135,20 +158,12 @@ body {
     width: 90%;
 }
 
-/* .line {
-    border: 1px solid var(--gray-background);
-    height: 0;
-    margin: 2rem auto;
-    width: 40%;
-} */
-
 /* ----------------------   PROJECTS  -----------------------  */
 
 #projects {
-    /* margin-top: 2rem; */
     background-color: var(--gray-light);
-    /* border-radius: 20px 20px 0 0; */
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 #container-projects h3 {
@@ -158,17 +173,17 @@ body {
     font-weight: 500;
 }
 
-/* CARROSSEL --------------------------------------*/
+/* CARROUSSEL --------------------------------------*/
 
 #frame-carroussel {
     background-color: var(--beige-background);
     width: 100%;
-    height: 15rem;
+    height: 17rem;
     position: relative;
-    /* margin-block: 1rem; */
+    margin: auto;
 }
 
-#frame-carroussel img {
+#frame-carroussel li img {
     width: 100%;
     height: 14rem;
     /* padding-top: 1rem; */
@@ -176,25 +191,33 @@ body {
 
 #left-arrow {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 2%;
+    bottom: 50%;
     
     width: 3rem;
     height: 2rem;
-    background-color: #ff0000;
+    background-color: rgba(217, 217, 217, 0.4);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #right-arrow {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 2%;
+    bottom: 50%;
     
     width: 3rem;
     height: 2rem;
-    background-color: #ff0000;
+    background-color: rgba(217, 217, 217, 0.4);
     border-radius: 5px;
+    cursor: pointer;
 }
+
+#right-arrow img, #left-arrow img {
+    padding-top: .7rem;
+}
+
+
 
 /* CARDS --------------------------------------------*/ 
 
@@ -244,4 +267,416 @@ body {
     width: 35%;
     font-size: .8rem;
     text-align: center;
+}
+
+/* ABOUT --------------------------------------------*/ 
+
+#about {
+    margin: auto;
+    background: #fff;
+}
+
+#header-about {
+    text-align: center;
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+#header-about img {
+    width: 90%;
+    padding-top: 3rem;
+    margin: auto;
+}
+
+#skills {
+    width: 100%;
+    background: var(--beige-background);
+    text-align: center;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1rem;
+}
+
+#about-luciana {
+    padding-top: 2rem;
+}
+
+#about-luciana p {
+    padding: 1rem;
+}
+
+#about-luciana p:last-child {
+    padding-bottom: 3rem;
+}
+
+/* CONTACT --------------------------------------------*/ 
+
+#contact {
+    width: 100%;
+    background: var(--beige-background);
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 2rem;
+}
+
+#header-contact {
+    margin: auto;
+    width: 90%;
+    padding-top: 3rem;
+}
+
+#header-contact h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#header-contact p {
+    padding-block: 1rem;
+}
+
+#contact form {
+    margin: auto;
+    width: 90%;
+}
+
+.input-wrapper {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    padding-bottom: 1rem;
+}
+
+.input-wrapper input {
+    all: unset;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000;
+}
+
+#check {
+    padding-block: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#check h4 {
+    width: 100%;
+}
+
+#message-area p {
+    padding-bottom: 1rem;
+}
+
+#text-area {
+    all: unset;
+    border: 1px solid #000;
+    width: 100%;
+    height: 7rem;
+}
+
+
+
+
+/* BUDGET --------------------------------------------*/ 
+
+#budget-container {
+    width: 100%;
+    background: var(--gray-background);
+    padding-block: 2rem;
+}
+
+#text-logo {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    padding: 2rem 1rem;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-logo p {
+    font-size: .9rem;
+    font-weight: bold;
+    width: 60%;
+    padding-block: 2rem;
+}
+
+#budget-container > p {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#div_button {
+    display: flex;
+    justify-content: center;
+}
+
+#budget-container .btn {
+    width: 90%;
+}
+
+/* FOOTER --------------------------------------------*/
+
+#footer-container {
+    padding-block: 2rem;
+    background: var(--beige-background);
+    position: relative;
+    margin: auto;
+}
+
+#footer-container p {
+    font-size: 14px;
+    font-weight: light;
+}
+
+#footer-container > p {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#footer-footer {
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    align-items: flex-end;
+}
+
+#social-media {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#footer-home {
+    display: none;
+}
+
+.homeDesktop {
+    display: none;
+}
+
+/* DESKTOP --------------------------------------------*/
+
+@media (min-width: 768px){
+    
+/* RETIRADA MOBILE ------------------------------------*/
+
+    body {
+        width: 100vw;
+    }
+
+    .homeMobile {
+        display: none;
+    }
+
+    .homeDesktop {
+        display: block;
+    }
+
+
+    #menu-icon-closed {
+        display: none;
+    }
+
+
+    #footer-home {
+        display: block;
+    }
+
+
+/* DESKTOP --------------------------------------------*/
+
+
+
+
+
+
+    body {
+        max-width: 1440px;
+    }
+
+
+    #container {
+        width: 100%;
+    }
+
+    #main-background {
+        width: 100%;
+    }
+
+    #header-desktop {
+        display: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        background: rgba(255,255,255,0);
+    }
+
+    #header-desktop #logo-desktop-horizontal img {
+        max-width: 18rem;
+        
+    }
+
+    #header-desktop ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header-desktop nav ul li a{
+        text-decoration: none;
+        color: #6f6f6f;
+        margin-left: 10rem;
+        font-size: .8rem;
+    }
+
+    #btn-contact-desktop {
+        margin: 0 0 0 10rem;
+        padding: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul #btn-contact-desktop a {
+        color: #fff;
+        text-decoration: none;
+        font-size: .8rem;
+    }
+
+    #main-desktop {
+        display: flex;
+        position: relative;
+    }
+
+    #background-white {
+        width: 60%;
+        background-color: #fff;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #desktop-profile {
+        z-index: 1;
+        position: relative;
+    }
+
+    #desktop-profile img {
+        width: 25rem;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+    }
+
+    #text-profile {
+        z-index: 1;
+        padding-top: 15rem;
+    }
+
+    #text-profile h3 {
+        max-width: 200px;
+        text-align: center;
+    }
+
+    #text-profile p {
+        margin-top: 2rem;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    #background-beige {
+        width: 40%;
+        background: var(--beige-background);
+        height: 100vh;
+    }
+
+
+    /* --------  SERVICES ------------------- */
+
+    .services-desktop {
+        height: 100%;
+        margin-top: 10rem;
+    }
+
+    .text-work-for {
+        position: relative;
+        margin-bottom: 4rem;
+        z-index: 1;
+    }
+
+    .div-text-works {
+        position: relative;
+        z-index: 2;
+        margin-top: 2rem;
+        background: rgba(217, 217, 217, .6)
+    }
+
+    #fale-conosco {
+        position: relative;
+        margin-top: 3rem;
+        z-index: 1;
+    }
+
+    #background-gray {
+        position: absolute;
+        right: 0;
+        top: 3rem;
+        bottom: 5;
+        background: var(--gray-background);
+        width: 100%;
+        height: 80%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    #footer-home {
+        width: 100%;
+        background: rgba(188, 53, 28, 1);
+        height: 3rem;
+        z-index: 100;
+    }
+
+
+
+    /* --------  PROJETOS ---------------------- */
+
+
+    #frame-carroussel {
+        height: auto;
+    }
+
+    #frame-carroussel li img {
+        width: 100%;
+        height: auto;
+        /* padding-top: 1rem; */
+    }
+
+    #project-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        width: 90%;
+    }
+
 }
