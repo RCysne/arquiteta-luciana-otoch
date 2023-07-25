@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ept-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,17 +71,16 @@
         <div class="homeDesktop">
             <header id="desktop-menu">
                 <div id="header-desktop">
-                    <div id="logo-desktop-horizontal">
-                        <img src="./assets/logo-horizontal.png" alt="">
-                    </div>
                     <nav>
+                        <div id="logo-desktop-horizontal">
+                            <img src="./assets/logo-horizontal.png" alt="">
+                        </div>
                         <ul>
                             <li><a href="">Home</a></li>
-                            <li><a href="">Projetos</a></li>
+                            <li><a href="#desktop-projects">Projetos</a></li>
                             <li><a href="">Sobre</a></li>
-                            <button id="btn-contact-desktop" class="btn" type="submit"><a href="https://wa.me/+5585991716260" target="_blank">Contato</a></button>
-                            
                         </ul>
+                        <button id="btn-contact-desktop" class="btn" type="submit"><a href="https://wa.me/+5585991716260" target="_blank">Contato</a></button>
                     </nav>
                 </div>
             </header>
@@ -128,48 +127,49 @@
         </div>
 
 
-    <!-- ----------------------   PROJECTS  ----------------------- -->
+    <!-- ----------------------  MOBILE PROJECTS  ----------------------- -->
 
     <section id="projects">
         <div id="container-projects">
 
             <h3>Projetos</h3>
+            <div class="desktop-display">
+                <div id="frame-carroussel">
+                    <button>
+                        <div id="left-arrow">
+                            <img src="./assets/left-arrow.svg" alt="">
+                        </div>
+                    </button>
+                    <button>
+                        <div id="right-arrow">
+                            <img src="./assets/right-arrow.svg" alt="">
+                        </div>
+                    </button>
 
-            <div id="frame-carroussel">
-                <button>
-                    <div id="left-arrow">
-                        <img src="./assets/left-arrow.svg" alt="">
-                    </div>
-                </button>
-                <button>
-                    <div id="right-arrow">
-                        <img src="./assets/right-arrow.svg" alt="">
-                    </div>
-                </button>
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <img src="./assets/projeto01.jpg" alt="Fachada de uma casa no Alphavile">
+                        </li>
+                        
+                        <!-- <li class="slide">
+                            <img src="./assets/projeto02.jpg" alt="Fachada de uma casa no Alphavile">
+                        </li>
+                
+                        <li class="slide">
+                            <img src="./assets/projeto03.jpg" alt="Fachada de uma casa no Alphavile">
+                        </li>
+                
+                        <li class="slide">
+                            <img src="./assets/projeto04.jpg" alt="Fachada de uma casa no Alphavile">
+                        </li> -->
+                    </ul>
 
-                <ul data-slides>
-                    <li class="slide" data-active>
-                        <img src="./assets/projeto01.jpg" alt="Fachada de uma casa no Alphavile">
-                    </li>
-                    
-                    <!-- <li class="slide">
-                        <img src="./assets/projeto02.jpg" alt="Fachada de uma casa no Alphavile">
-                    </li>
-            
-                    <li class="slide">
-                        <img src="./assets/projeto03.jpg" alt="Fachada de uma casa no Alphavile">
-                    </li>
-            
-                    <li class="slide">
-                        <img src="./assets/projeto04.jpg" alt="Fachada de uma casa no Alphavile">
-                    </li> -->
-                </ul>
+                </div>
 
-            </div>
-
-            <div id="project-text">
-                <p>Um breve passeio pelo nosso trabalho. Para ficar por dentro dos nossos projetos mais atuais siga nosso instagram.</p>
-                <a href="https://www.instagram.com/arquitetalucianaotoch"><img src="./assets/icon-instagram.svg" alt=""></a>
+                <div id="project-text">
+                    <p>Um breve passeio pelo nosso trabalho. Para ficar por dentro dos nossos projetos mais atuais siga nosso instagram.</p>
+                    <a href="https://www.instagram.com/arquitetalucianaotoch"><img src="./assets/icon-instagram.svg" alt=""></a>
+                </div>
             </div>
 
         </div>
@@ -220,12 +220,103 @@
         </div>
     </section>
 
+
+    <!--------------------- DESKTOP PROJECTS ------------>
+
+    <section id="desktop-projects">
+
+        <div id="container-projects">
+            <div class="desktop-display">
+                <h3>Projetos</h3>
+                <div id="desktop-frame-carroussel">
+                    <button>
+                        <div id="left-arrow">
+                            <img src="./assets/left-arrow.svg" alt="">
+                        </div>
+                    </button>
+                    <button>
+                        <div id="right-arrow">
+                            <img src="./assets/right-arrow.svg" alt="">
+                        </div>
+                    </button>
+
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <img src="./assets/projeto01.jpg" alt="Fachada de uma casa no Alphavile">
+                        </li>
+                    </ul>
+
+                </div>
+                <div id="project-text">
+                    <p>Um breve passeio pelo nosso trabalho. Para ficar por dentro dos nossos projetos mais atuais siga nosso instagram.</p>
+                    <a href="https://www.instagram.com/arquitetalucianaotoch"><img src="./assets/icon-instagram.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-cards-text">
+            <div id="project-cards">
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto01.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+            
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto02.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+                
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto03.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+                
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto04.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+                
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto01.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+
+                <button>
+                    <div class="card">
+                        <img src="./assets/projeto02.jpg" alt="">
+                        <p>Trabalho Residencial, com iluminação natural.</p>
+                    </div>
+                </button>
+            </div>
+
+            <!-- <div id="project-text">
+                <p>Um breve passeio pelo nosso trabalho. Para ficar por dentro dos nossos projetos mais atuais siga nosso instagram.</p>
+                <a href="https://www.instagram.com/arquitetalucianaotoch"><img src="./assets/icon-instagram.svg" alt=""></a>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+
     <!-- ----------------------   ABOUT  ----------------------- -->
 
     <section id="about">
         <div id="header-about">
             <h3>Sobre</h3>
-            <img src="./assets/foto_perfil-02.png" alt="">
+            <img id="about-photo" src="./assets/foto_perfil-02.png" alt="">
         </div>
         <div id="skills">
             <div class="skills-luciana">

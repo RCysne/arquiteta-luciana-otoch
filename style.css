@@ -36,6 +36,27 @@ body {
     max-width: 768px;
 }
 
+/* ----- BARRA DE NAVEGAÇÃO DESKTOP ---- */
+
+nav {
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    padding: 1rem;
+}
+
+ul {
+    margin-left: 15rem;
+}
+
+#background-white {
+    margin-top: 5rem;
+}
+
+#background-beige {
+    padding-top: 5rem;
+}
+
 #header-desktop {
     display: none;
 }
@@ -57,7 +78,7 @@ body {
 
 #presentation {
     width: 80%;
-    heigth: 100%;
+    height: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -159,6 +180,10 @@ body {
 }
 
 /* ----------------------   PROJECTS  -----------------------  */
+
+#desktop-projects {
+    display: none;
+}
 
 #projects {
     background-color: var(--gray-light);
@@ -521,10 +546,10 @@ body {
     }
 
     #header-desktop {
-        display: fixed;
-        top: 0;
+        /* display: fixed;
+        top: 0; */
         width: 100%;
-        padding: 1rem;
+        /* padding: .5rem; */
         display: flex;
         justify-content: space-between;
         background: rgba(255,255,255,0);
@@ -549,7 +574,7 @@ body {
     }
 
     #btn-contact-desktop {
-        margin: 0 0 0 10rem;
+        margin: .5rem 0 0 10rem;
         padding: 1rem;
         height: 1rem;
         display: flex;
@@ -557,7 +582,7 @@ body {
         align-items: center;
     }
 
-    ul #btn-contact-desktop a {
+    #btn-contact-desktop a {
         color: #fff;
         text-decoration: none;
         font-size: .8rem;
@@ -640,7 +665,7 @@ body {
     #background-gray {
         position: absolute;
         right: 0;
-        top: 3rem;
+        top: 5rem;
         bottom: 5;
         background: var(--gray-background);
         width: 100%;
@@ -660,23 +685,97 @@ body {
     /* --------  PROJETOS ---------------------- */
 
 
-    #frame-carroussel {
-        height: auto;
+    #projects {
+        display: none;
     }
 
-    #frame-carroussel li img {
-        width: 100%;
-        height: auto;
-        /* padding-top: 1rem; */
-    }
-
-    #project-cards {
+    #desktop-projects {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 3fr 2fr;
+    }
+
+
+    /* Desktop cards */
+
+    .desktop-cards-text {
+        width: 100%;
+        background: var(--beige-background);
+        height: 100vh;
     }
 
     .card {
-        width: 90%;
+        width: 60%;
+    }
+
+    /* Desktop Carrossel */
+
+    #desktop-frame-carrroussel {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: var(--beige-background);
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
+    #desktop-frame-carroussel {
+        background-color: var(--beige-background);
+        width: 100%;
+        height: 17rem;
+        position: relative;
+        margin: auto;
+    }
+    
+    /* #frame-carroussel li img {
+        width: 100%;
+        height: 14rem;
+    } */
+    
+    #left-arrow {
+        position: absolute;
+        left: 2%;
+        bottom: 50%;
+        
+        width: 3rem;
+        height: 2rem;
+        background-color: rgba(217, 217, 217, 0.4);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #right-arrow {
+        position: absolute;
+        right: 2%;
+        bottom: 50%;
+        
+        width: 3rem;
+        height: 2rem;
+        background-color: rgba(217, 217, 217, 0.4);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #right-arrow img, #left-arrow img {
+        padding-top: .7rem;
+    }
+    
+    /* Desktop Texto Carrossel */
+    
+    #project-text {
+        display: flex;
+        justify-content: left;
+        margin-left: 0;
+    }
+
+    #project-text p {
+        width: 46%
+    }
+
+    #header-about #about-photo {
+        width: 50rem;
+        margin-top: 3rem;
     }
 
 }
